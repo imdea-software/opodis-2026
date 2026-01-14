@@ -1,0 +1,47 @@
+# Travel & Accommodation Configuration
+#
+# TEMPLATE INSTRUCTIONS:
+#   1. List main airports with distances
+#   2. Provide public transport guidance
+#   3. Add directions to venue
+#   4. Include visa information if applicable
+#
+# For reference, see sample-opodis23 branch (Tokyo travel info)
+
+show_on_site: true
+
+title: "Travel Information"
+
+airports:
+  - code: "TBD"
+    name: "TBD Airport"
+    distance: "TBD"
+    travel_time: "TBD"
+    info: |
+      TBD - Information about this airport
+
+public_transport: |
+  ## Getting Around
+  
+  TBD - Update with local transportation information:
+  - Metro/subway system
+  - Bus network
+  - Taxis
+  - Ride-sharing apps
+  - Transit cards or passes
+
+to_venue: |
+  ## Getting to the Venue
+  
+  TBD - Specific directions to conference venue:
+  - From main train/metro station
+  - Walking directions
+  - Estimated travel time
+
+visa_info: |
+  ## Visa Requirements
+  
+  TBD - Update with visa information:
+  - Which countries require visas
+  - Link to official immigration website
+  - Invitation letter policy (e.g., "available after registration")

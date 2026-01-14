@@ -1,0 +1,69 @@
+show_on_site: true
+
+general:
+  acronym: "OPODIS"
+  series_url: "https://www.opodis.net"
+  fullname: "International Conference on Principles of Distributed Systems"
+  name: "Conference on Principles of Distributed Systems"
+  date_format: "%A, %B %-d, %Y"
+  locale:
+    timezone: "UTC"    # Fallback timezone if none specified in year section
+  tbd: "TBD"
+  buttons:
+    - label: "About {ACRONYM} {YEAR:02}"
+      href: "#about"
+    - label: "Register"
+      href: "#subscribe"
+  footer:
+    logo: "img/logo-opodis.png"
+    blurb: "OPODIS is an open forum for the exchange of state-of-the-art knowledge concerning distributed computing and distributed computer systems. All aspects of distributed systems are within the scope of OPODIS, including theory, specification, design, performance, and system building."
+    useful_links:
+      - label: "Tokyo Tech"
+        icon: "fa-university"
+        url: "https://www.titech.ac.jp/english"
+      - label: "OPODIS conference series"
+        icon: "fa-angle-right"
+        url: "https://www.opodis.net"
+
+# TEMPLATE INSTRUCTIONS:
+# 1. Update year, edition, city, country
+# 2. Set conference dates (start/end)
+# 3. Update venue information
+# 4. Set contact emails
+# 5. Configure satellite events if any
+#
+# For reference, see sample-opodis23 branch (OPODIS 2023 example)
+
+year:
+  year: 2025                    # CHANGE: Your conference year
+  edition: 29                   # CHANGE: Increment from previous year
+  city: "TBD"                   # CHANGE: Your city
+  country: "TBD"                # CHANGE: Your country
+  dates:
+    start: 2025-12-10           # CHANGE: Conference start date (YYYY-MM-DD)
+    end: 2025-12-12             # CHANGE: Conference end date (YYYY-MM-DD)
+  locale:
+    timezone: "Europe/Rome"     # CHANGE: Your timezone (see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+  venue:
+    name: "TBD"                 # CHANGE: Venue name (e.g., "University Name")
+    building: "TBD"             # CHANGE: Building/room details
+    address_lines:
+      - "TBD"                   # CHANGE: Street address
+      - "TBD"                   # CHANGE: Postal code, city
+      - "TBD"                   # CHANGE: Country
+    address_localized: []       # OPTIONAL: Address in local language
+    map_url: ""                 # CHANGE: Google Maps URL
+  front_matters:
+    subtitle: "TBD"             # CHANGE: Will appear on homepage (e.g., "10-12 December 2025, Zurich, Switzerland")
+  contacts:
+    - label: "OPODIS 2025 Organizing Team"    # CHANGE: Update year
+      email: "TBD"              # CHANGE: General contact email
+    - label: "OPODIS 2025 Technical Program Chairs"  # CHANGE: Update year
+      email: "TBD"              # CHANGE: PC chairs email
+  satellite_event:
+    enabled: false              # CHANGE: Set true if you have a satellite event
+    name: ""                    # OPTIONAL: Event acronym
+    description: ""             # OPTIONAL: Brief description
+    dates: ""                   # OPTIONAL: Event dates
+    building: ""                # OPTIONAL: Building/location
+    link: ""                    # OPTIONAL: Link to event page

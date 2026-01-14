@@ -1,0 +1,36 @@
+# Committees Configuration
+#
+# Structure:
+#   general_chairs: Conference general chairs
+#   pc_chairs: Program committee chairs
+#   program_committee: Program committee members
+#   steering_committee: Series steering committee (optional)
+#
+# TEMPLATE INSTRUCTIONS:
+#   1. Add general chairs and PC chairs first
+#   2. Build program committee as members are confirmed
+#   3. Add steering committee members (check series website)
+#
+# For reference, see sample-opodis23 branch (40+ PC members)
+
+show_on_site: true
+
+general_chairs:
+  - name: "TBD"
+    affiliation: "TBD"
+    email: "TBD"
+
+pc_chairs:
+  - name: "TBD"
+    affiliation: "TBD"
+    email: "TBD"
+
+program_committee: []  # Add PC members as they are confirmed
+  # Example:
+  # - name: "John Doe"
+  #   affiliation: "Example University, Country"
+
+steering_committee: []  # OPODIS steering committee (check opodis.net)
+  # Example:
+  # - name: "Steering Member"
+  #   affiliation: "Institution, Country"

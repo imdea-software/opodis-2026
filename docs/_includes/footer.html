@@ -1,0 +1,56 @@
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            {% assign conf_data = site.data.conference %}
+            {% assign general = conf_data.general %}
+            {% assign current = conf_data.year %}
+            {% assign tbd = general.tbd | default: 'TBD' %}
+            {% assign conf = current.acronym | default: general.acronym | default: tbd %}
+            {% assign year = current.year | default: general.year | default: tbd %}
+            <img src="{{ general.footer.logo }}" alt="{{ conf }} '{{ year | slice: -2, 2 }}">
+            <p>{{ general.footer.blurb }}</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              {% for link in general.footer.useful_links %}
+                <li><i class="fa {{ link.icon }}"></i> <a href="{{ link.url }}">{{ link.label }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            {% assign contacts = current.contacts | default: general.contacts %}
+            {% if contacts %}
+              {% for contact in contacts %}
+              <p>
+                {{ contact.label }}
+                <br>
+                <strong>Email:</strong> <a href="mailto:{{ contact.email }}">{{ contact.email }}</a><br>
+              </p>
+              {% endfor %}
+            {% else %}
+              <p>{{ tbd }}</p>
+            {% endif %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>

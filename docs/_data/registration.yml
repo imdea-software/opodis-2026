@@ -1,0 +1,44 @@
+# Registration Configuration
+#
+# TEMPLATE INSTRUCTIONS:
+# - Use the fees structure with a single early_limit date.
+# - Numeric prices only; currency displayed separately.
+# - Keep what's included and terms updated.
+#
+# Status options: "closed", "opens_soon", "open", "deadline_approaching"
+
+show_on_site: true
+
+title: "Registration"
+
+status: "closed"
+registration_link: ""
+
+fees:
+  currency: "EUR"               # CHANGE: EUR, USD, GBP, JPY, etc.
+  early_limit: "2025-11-15"     # CHANGE: the last day when the early bird price still applies (YYYY-MM-DD)
+
+  student:
+    early_bird: 100              # Numeric price
+    late: 150                    # Numeric price
+    on_site: 200                 # Numeric price
+
+  regular:
+    early_bird: 300
+    late: 400
+    on_site: 500
+
+what_is_included:
+  - "Conference materials and program"
+  - "Coffee and snacks"
+  - "Lunches"
+  - "Welcome reception"
+  - "Conference proceedings (LIPIcs)"
+  - "Conference banquet"
+
+terms: |
+  ## Registration Terms
+  - At least one author of each accepted paper must register and present
+  - Registrations are non-refundable after [DATE - CHANGE]
+  - Change of registration type allowed until [DATE - CHANGE]
+  - Attendees requiring visa invitation letters may request one after registering

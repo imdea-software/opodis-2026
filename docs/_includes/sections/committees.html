@@ -1,0 +1,67 @@
+{% assign committees = site.data.committees %}
+{% assign enabled = committees.enabled | default: true %}
+{% assign show = committees.show_on_site | default: true %}
+{% if enabled and show %}
+<section id="committees">
+  <div class="container">
+    <div class="section-header">
+      <br>
+      <h2>Committees</h2>
+    </div>
+
+    <div class="row">
+      <!-- Organizing Committee -->
+      <div class="col-12 col-lg-6 mb-4">
+        <div class="committee-section">
+          <h3><i class="fa fa-institution"></i> Organizing Committee</h3>
+        {% if committees.organizing.general_chairs.enabled != false %}
+          {% assign gc_items = committees.organizing.general_chairs.items | default: committees.organizing.general_chairs %}
+          {% include sections/committee_list.html title="General Chairs" items=gc_items show_role=false %}
+        {% endif %}
+
+        {% if committees.organizing.publication_chair.enabled != false %}
+          {% assign pub_items = committees.organizing.publication_chair.items | default: committees.organizing.publication_chair %}
+          {% include sections/committee_list.html title="Publication Chair" items=pub_items show_role=false %}
+        {% endif %}
+
+        {% if committees.organizing.organizing_team.enabled != false %}
+          {% assign org_items = committees.organizing.organizing_team.items | default: committees.organizing.organizing_team %}
+          {% include sections/committee_list.html title="Organizing Team" items=org_items show_role=true %}
+        {% endif %}
+        </div>
+      </div>
+
+      <!-- Steering Committee -->
+      <div class="col-12 col-lg-6 mb-4">
+        <div class="committee-section">
+          <h3><i class="fa fa-university"></i> Steering Committee</h3>
+        {% if committees.steering.enabled != false %}
+          {% assign steering_items = committees.steering.items | default: committees.steering %}
+          {% include sections/committee_list.html items=steering_items show_role=true %}
+        {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Program Committee -->
+      <div class="col-12 mb-4">
+        <div class="committee-section">
+          <h3><i class="fa fa-graduation-cap"></i> Program Committee</h3>
+          <div class="program-committee-columns">
+        {% if committees.program_chairs.enabled != false %}
+          {% assign pc_chairs = committees.program_chairs.items | default: committees.program_chairs %}
+          {% include sections/committee_list.html title="Program Committee Chairs" items=pc_chairs show_role=false %}
+        {% endif %}
+
+        {% if committees.program_committee.enabled != false %}
+          {% assign pc_items = committees.program_committee.items | default: committees.program_committee %}
+          {% include sections/committee_list.html title="Program Committee Members" items=pc_items show_role=false %}
+        {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}

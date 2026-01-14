@@ -1,0 +1,327 @@
+{
+  "days": [
+    "Wed Dec 10",
+    "Thu Dec 11",
+    "Fri Dec 12"
+  ],
+  "rows": [
+    {
+      "time": 510,
+      "time_label": "8:30",
+      "break": false,
+      "cells": [
+        {
+          "kind": "cell",
+          "type": "registration",
+          "label": "Registration",
+          "title": null,
+          "number": null,
+          "rowspan": 2,
+          "talk_count": 0,
+          "papers": null,
+          "chair": null
+        },
+        null,
+        null
+      ]
+    },
+    {
+      "time": 530,
+      "time_label": "8:50",
+      "break": false,
+      "cells": [
+        {
+          "kind": "skip"
+        },
+        {
+          "kind": "cell",
+          "type": "registration",
+          "label": "Registration",
+          "title": null,
+          "number": null,
+          "rowspan": 2,
+          "talk_count": 0,
+          "papers": null,
+          "chair": null
+        },
+        {
+          "kind": "cell",
+          "type": "registration",
+          "label": "Registration",
+          "title": null,
+          "number": null,
+          "rowspan": 2,
+          "talk_count": 0,
+          "papers": null,
+          "chair": null
+        }
+      ]
+    },
+    {
+      "time": 540,
+      "time_label": "9:00",
+      "break": false,
+      "cells": [
+        {
+          "kind": "cell",
+          "type": "opening",
+          "label": "Opening",
+          "title": null,
+          "number": null,
+          "rowspan": 1,
+          "talk_count": 0,
+          "papers": null,
+          "chair": null
+        },
+        {
+          "kind": "skip"
+        },
+        {
+          "kind": "skip"
+        }
+      ]
+    },
+    {
+      "time": 550,
+      "time_label": "9:10",
+      "break": false,
+      "cells": [
+        {
+          "kind": "cell",
+          "type": "keynote",
+          "label": null,
+          "title": null,
+          "number": 1,
+          "rowspan": 1,
+          "talk_count": 0,
+          "papers": null,
+          "chair": "TBD"
+        },
+        {
+          "kind": "cell",
+          "type": "keynote",
+          "label": null,
+          "title": null,
+          "number": 2,
+          "rowspan": 1,
+          "talk_count": 0,
+          "papers": null,
+          "chair": "TBD"
+        },
+        {
+          "kind": "cell",
+          "type": "keynote",
+          "label": null,
+          "title": null,
+          "number": 3,
+          "rowspan": 1,
+          "talk_count": 0,
+          "papers": null,
+          "chair": "TBD"
+        }
+      ]
+    },
+    {
+      "time": 610,
+      "time_label": "10:10",
+      "break": true,
+      "label": "Coffee break"
+    },
+    {
+      "time": 635,
+      "time_label": "10:35",
+      "break": false,
+      "cells": [
+        {
+          "kind": "cell",
+          "type": "session",
+          "label": null,
+          "title": "TBD",
+          "number": 1,
+          "rowspan": 2,
+          "talk_count": 0,
+          "papers": [],
+          "chair": "TBD"
+        },
+        {
+          "kind": "cell",
+          "type": "session",
+          "label": null,
+          "title": "TBD",
+          "number": 4,
+          "rowspan": 1,
+          "talk_count": 0,
+          "papers": [],
+          "chair": "TBD"
+        },
+        {
+          "kind": "cell",
+          "type": "session",
+          "label": null,
+          "title": "TBD",
+          "number": 7,
+          "rowspan": 1,
+          "talk_count": 0,
+          "papers": [],
+          "chair": "TBD"
+        }
+      ]
+    },
+    {
+      "time": 705,
+      "time_label": "11:45",
+      "break": true,
+      "label": "LUNCH"
+    },
+    {
+      "time": 725,
+      "time_label": "12:05",
+      "break": true,
+      "label": "LUNCH"
+    },
+    {
+      "time": 810,
+      "time_label": "13:30",
+      "break": false,
+      "cells": [
+        {
+          "kind": "cell",
+          "type": "session",
+          "label": null,
+          "title": "TBD",
+          "number": 2,
+          "rowspan": 1,
+          "talk_count": 0,
+          "papers": [],
+          "chair": "TBD"
+        },
+        {
+          "kind": "cell",
+          "type": "session",
+          "label": null,
+          "title": "TBD",
+          "number": 5,
+          "rowspan": 1,
+          "talk_count": 0,
+          "papers": [],
+          "chair": "TBD"
+        },
+        {
+          "kind": "cell",
+          "type": "session",
+          "label": null,
+          "title": "TBD",
+          "number": 8,
+          "rowspan": 1,
+          "talk_count": 0,
+          "papers": [],
+          "chair": "TBD"
+        }
+      ]
+    },
+    {
+      "time": 905,
+      "time_label": "15:05",
+      "break": true,
+      "label": "Coffee break"
+    },
+    {
+      "time": 930,
+      "time_label": "15:30",
+      "break": false,
+      "cells": [
+        {
+          "kind": "cell",
+          "type": "session",
+          "label": null,
+          "title": "TBD",
+          "number": 3,
+          "rowspan": 1,
+          "talk_count": 0,
+          "papers": [],
+          "chair": "TBD"
+        },
+        {
+          "kind": "cell",
+          "type": "session",
+          "label": null,
+          "title": "TBD",
+          "number": 6,
+          "rowspan": 2,
+          "talk_count": 0,
+          "papers": [],
+          "chair": "TBD"
+        },
+        {
+          "kind": "cell",
+          "type": "session",
+          "label": null,
+          "title": "TBD",
+          "number": 9,
+          "rowspan": 2,
+          "talk_count": 0,
+          "papers": [],
+          "chair": "TBD"
+        }
+      ]
+    },
+    {
+      "time": 1000,
+      "time_label": "16:40",
+      "break": false,
+      "cells": [
+        {
+          "kind": "cell",
+          "type": "business",
+          "label": "Business meeting",
+          "title": null,
+          "number": null,
+          "rowspan": 2,
+          "talk_count": 0,
+          "papers": null,
+          "chair": null
+        },
+        {
+          "kind": "skip"
+        },
+        {
+          "kind": "skip"
+        }
+      ]
+    },
+    {
+      "time": 1025,
+      "time_label": "17:05",
+      "break": false,
+      "cells": [
+        {
+          "kind": "skip"
+        },
+        null,
+        {
+          "kind": "cell",
+          "type": "closing",
+          "label": "Closing",
+          "title": null,
+          "number": null,
+          "rowspan": 2,
+          "talk_count": 0,
+          "papers": null,
+          "chair": null
+        }
+      ]
+    },
+    {
+      "time": 1030,
+      "time_label": "17:10",
+      "break": false,
+      "cells": [
+        null,
+        null,
+        {
+          "kind": "skip"
+        }
+      ]
+    }
+  ]
+}

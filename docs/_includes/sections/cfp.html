@@ -1,0 +1,38 @@
+{% assign cfp = site.data.cfp %}
+{% assign enabled = cfp.enabled | default: true %}
+{% assign show = cfp.show_on_site | default: true %}
+{% if enabled and show %}
+<section id="cfp">
+  <div class="container">
+    <div class="section-header">
+      <br>
+      <h2>{{ cfp.title | default: 'Call for Papers' }}</h2>
+      {% if cfp.status %}<p><span class="badge badge-{{ cfp.status }}">{{ cfp.status | upcase }}</span></p>{% endif %}
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        {% if cfp.text %}
+          {{ cfp.text | markdownify }}
+        {% endif %}
+      </div>
+    </div>
+
+    {% if cfp.submission_link %}
+    <div class="row">
+      <div class="col-lg-12">
+        <p><strong>Submit your paper:</strong> <a href="{{ cfp.submission_link }}" target="_blank">{{ cfp.submission_link }}</a></p>
+      </div>
+    </div>
+    {% endif %}
+
+    {% if cfp.external_cfp_url %}
+    <div class="row">
+      <div class="col-lg-12">
+        <p><a href="{{ cfp.external_cfp_url }}" target="_blank">View full CFP →</a></p>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endif %}

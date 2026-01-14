@@ -1,0 +1,40 @@
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        {% assign conf_data = site.data.conference %}
+        {% assign general = conf_data.general %}
+        {% assign current = conf_data.year %}
+        {% assign tbd = general.tbd | default: 'TBD' %}
+        {% assign conf = current.acronym | default: general.acronym | default: tbd %}
+        {% assign year = current.year | default: general.year | default: tbd %}
+        <h1><a href="/">{{ conf }} {{ year }}</a></h1>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          {% for item in site.data.siteconfig.nav %}
+            {% assign show_item = true %}
+            {% case item.key %}
+              {% when 'speakers' %}{% assign show_item = site.data.keynotes.show_on_site | default: true %}
+              {% when 'committees' %}{% assign show_item = site.data.committees.show_on_site | default: true %}
+              {% when 'program' %}{% assign show_item = site.data.program.show_on_site | default: true %}
+              {% when 'venue' %}{% assign show_item = site.data.venue.show_on_site | default: true %}
+              {% when 'travel' %}{% assign show_item = site.data.travel.show_on_site | default: true %}
+              {% when 'registration' %}{% assign show_item = site.data.registration.show_on_site | default: true %}
+              {% when 'sponsors' %}{% assign show_item = site.data.sponsors.show_on_site | default: true %}
+              {% when 'cfp' %}{% assign show_item = site.data.cfp.show_on_site | default: true %}
+              {% when 'dates' %}{% assign show_item = site.data.dates.show_on_site | default: true %}
+              {% when 'papers' %}{% assign show_item = site.data.papers.show_on_site | default: true %}
+            {% endcase %}
+            {% if show_item %}
+              <li{% if forloop.first and page.url == "/index.html" %} class="menu-active"{% endif %}><a href="{{ item.href }}">{{ item.label }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->

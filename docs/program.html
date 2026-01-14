@@ -1,0 +1,25 @@
+---
+layout: default
+title: "Program"
+---
+
+{% assign conf_data = site.data.conference %}
+{% assign general = conf_data.general %}
+{% assign current = conf_data.year %}
+{% assign acronym = current.acronym | default: general.acronym %}
+{% assign year_full = current.year | default: general.year %}
+{% if year_full %}
+  {% assign year_two = year_full | append: '-01-01' | date: '%y' %}
+{% else %}
+  {% assign year_two = '' %}
+{% endif %}
+
+{% assign program_text = site.data.program.text %}
+{% capture program_lead %}{% include utils/apply_placeholders.html text=program_text.lead %}{% endcapture %}
+{% capture program_preamble %}{% include utils/apply_placeholders.html text=program_text.preamble %}{% endcapture %}
+
+<main id="main" class="main-page">
+  {% include sections/program_outline.html %}
+  {% include sections/program_schedule.html id="detailed-program" anchor_name="detailed-program" title="Detailed Program" lead=program_lead preamble=program_preamble %}
+
+</main>

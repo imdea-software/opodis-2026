@@ -1,0 +1,41 @@
+{% assign sponsors = site.data.sponsors %}
+{% assign enabled = sponsors.enabled | default: true %}
+{% assign show = sponsors.show_on_site | default: true %}
+{% if enabled and show %}
+{% assign tiers = sponsors.tiers %}
+{% assign sponsor_blurb_raw = sponsors.blurb | default: 'We are grateful to our sponsors.' %}
+{% capture sponsor_blurb %}{% include utils/apply_placeholders.html text=sponsor_blurb_raw %}{% endcapture %}
+<section id="supporters" class="section-with-bg wow fadeInUp">
+  <div class="container">
+    <div class="section-header">
+      <h2>Sponsors</h2>
+      <p>{{ sponsor_blurb }}</p>
+    </div>
+
+    {% for tier in tiers %}
+    <div class="row no-gutters supporters-wrap clearfix">
+      {% for sponsor in tier.sponsors %}
+      <div class="col-lg-3 col-md-4 col-xs-6">
+        <div class="supporter-logo">
+          <a href="{{ sponsor.url }}">
+            <img src="{{ sponsor.logo }}" class="img-fluid" alt="{{ sponsor.name }}">
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+
+    <div class="row no-gutters supporters-wrap clearfix">
+      <ul>
+        {% for tier in tiers %}
+          {% for sponsor in tier.sponsors %}
+          <li>{{ sponsor.note }}</li>
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    </div>
+
+  </div>
+</section>
+{% endif %}

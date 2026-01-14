@@ -1,0 +1,76 @@
+# Keynote Speakers Configuration
+#
+# Progression/Maturity:
+#   - Stage 1 (Early): Speaker names only (or "TBD")
+#   - Stage 2 (Mid): Add affiliation and speaker photo
+#   - Stage 3 (Late): Add bio, abstract, links
+#
+# TEMPLATE INSTRUCTIONS:
+#   1. Add keynote speakers as they are confirmed
+#   2. Use "TBA" or "To be announced" for unconfirmed details
+#   3. Photos should be added to docs/img/speakers/
+#
+# For reference, see sample-opodis23 branch (OPODIS 2023 with 3 keynotes)
+#
+# Appearance: Conference home page "Keynotes" section
+#
+# Photo Requirements:
+#   - Recommended: square format (640x480 or similar)
+#   - Location: docs/img/speakers/
+#   - Optional: not required for site to work
+#
+# TBA/Draft Support:
+#   - name: "TBA" or "TBD" triggers draft badge display
+#   - title can also be "TBA" initially
+#   - Fill in details as they become available
+#
+# Fields:
+#   - id: Keynote number (referenced in program.yml)
+#   - name: Full name of speaker (use "TBA" if not yet confirmed)
+#   - affiliation: Organization/university (optional)
+#   - title: Talk title (can be "TBA" or null if not confirmed)
+#   - photo: Path to speaker image (optional)
+#   - bio: Biographical paragraph (optional, added late)
+#   - abstract: Talk abstract (optional, added late)
+#   - details_page: Link to dedicated speaker page (optional)
+#
+# See CONFIG.md for typical timelines and examples.
+
+show_on_site: true
+
+speakers:
+  # Keynote 1
+  - id: 1
+    name: "TBA"                 # CHANGE: Speaker name (use "TBA" until confirmed)
+    affiliation: "TBA"          # CHANGE: Institution
+    title: "TBA"                # CHANGE: Talk title (use "TBA" until confirmed)
+    abstract: |
+      TBA - Update when abstract is available.
+    bio: |
+      TBA - Update with speaker bio.
+    photo: "img/speakers/placeholder.jpg"    # CHANGE: Add speaker photo
+    details_page: ""            # OPTIONAL: Link to dedicated speaker page
+
+  # Keynote 2
+  - id: 2
+    name: "TBA"
+    affiliation: "TBA"
+    title: "TBA"
+    abstract: |
+      TBA
+    bio: |
+      TBA
+    photo: "img/speakers/placeholder.jpg"
+    details_page: ""
+
+  # Keynote 3
+  - id: 3
+    name: "TBA"
+    affiliation: "TBA"
+    title: "TBA"
+    abstract: |
+      TBA
+    bio: |
+      TBA
+    photo: "img/speakers/placeholder.jpg"
+    details_page: ""

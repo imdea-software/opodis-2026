@@ -1,0 +1,39 @@
+# Accepted Papers Configuration
+#
+# Progression/Maturity:
+#   - Stage 1: Not shown on site (papers still under review)
+#   - Stage 2: Paper list published after peer review
+#   - Stage 3: Papers assigned to sessions in schedule (program.yml)
+#
+# TEMPLATE INSTRUCTIONS:
+#   1. Leave empty until papers are accepted
+#   2. After acceptance, add papers with number, title, authors
+#   3. Optionally mark award winners
+#
+# For reference, see sample-opodis23 branch (35 accepted papers)
+#
+# Author display:
+#   - `authors` may be a string, or an array of strings, or an array of
+#     dictionaries with `name` (required) and `affiliation` (optional)
+#
+# Required keys per paper: `number`, `title`
+# Optional keys: `authors`, `abstract`, `award`, `links`, `affiliation`
+#
+# Format:
+#   - number: Paper ID (used in program.yml to assign to sessions)
+#     title: Paper title
+#     authors: List of authors
+#     award: "best paper" or "best student paper" (optional)
+
+show_on_site: true
+
+items: []  # Empty until papers are accepted
+
+# Example format (uncomment and fill in after acceptance):
+# items:
+#   - number: 1
+#     title: "Example Paper Title"
+#     authors:
+#       - "First Author"
+#       - "Second Author"
+#     award: ""  # or "best paper", "best student paper"

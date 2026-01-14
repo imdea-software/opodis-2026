@@ -1,0 +1,214 @@
+# OPODIS Program Configuration
+# This file defines the conference schedule and program structure.
+#
+# Progression/Maturity:
+#   - Stage 1 (Early): Create skeleton with times, session count, TBD chairs
+#   - Stage 2 (Mid): Add session titles, confirm chairs
+#   - Stage 3 (Late): Assign papers to sessions
+#
+# TEMPLATE INSTRUCTIONS:
+#   1. Update dates and times for your conference
+#   2. Add session titles and chairs as they're confirmed
+#   3. Assign papers to sessions after acceptance decisions
+#   4. Run `bundle exec ruby scripts/validate_and_generate.rb` after changes
+#
+# For reference, see sample-opodis23 branch (full OPODIS 2023 schedule)
+#
+# Key Points:
+#   - Run `bundle exec ruby scripts/validate_and_generate.rb` after changes
+#   - All times must be HH:MM format (24-hour)
+#   - Each item must have a start time or inherit from previous item's end
+#   - Papers are referenced by number from docs/_data/papers.yml
+#   - Duration can be explicit (minutes) or inferred from papers
+#   - Session chairs are free-form names here and are NOT cross-validated against committees
+#
+# See CONFIG.md for detailed examples and workflows.
+
+show_on_site: true
+
+outline:
+  social:
+    - "Reception (Dec. XX, 18:00-20:00)"
+    - "Banquet (Dec. XX, 19:00-21:30)"
+
+text:
+  lead: "The conference program features keynote talks, technical sessions, and social events."
+  preamble: "<strong>Welcome Reception</strong>: TBD<br><strong>Banquet</strong>: TBD"
+
+schedule:
+  # Base start date for the program; used if individual day.date is absent
+  date: 2025-12-10           # CHANGE: Conference start date
+  
+  # Local flip time (HH:MM) to auto-select active day in live view
+  # (e.g., after this time on a given day, display next day's schedule)
+  flip_time: "22:00"
+  
+  # Default durations (minutes) for computing end times
+  # Used when papers are assigned but no explicit duration given
+  durations:
+    paper: 20                # Typically 20 min per paper (+ Q&A built-in)
+    keynote: 60              # Typically 1 hour for keynote talks
+  
+  # Labels for common item types (used in schedule when not explicitly set)
+  labels:
+    break: "Coffee break"
+    registration: "Registration"
+    business: "Business meeting"
+    opening: "Opening"
+    closing: "Closing"
+  
+  days:
+    # Each day references a calendar date; items hold the detailed slots in order
+    # Day 1
+    - date: 2025-12-10       # CHANGE: Day 1 date
+      label: "Wed Dec 10"    # CHANGE: Day label
+      items:
+        - time: "08:30"
+          type: "registration"
+        
+        - time: "09:00"
+          type: "opening"
+        
+        - time: "09:10"
+          type: "keynote"
+          number: 1
+          chair: "TBD"       # CHANGE: Session chair
+        
+        - type: "break"
+        
+        - time: "10:35"
+          type: "session"
+          number: 1
+          title: "TBD"       # CHANGE: Session title
+          chair: "TBD"       # CHANGE: Session chair
+          papers: []         # Will populate after paper acceptance
+          duration: 90
+        
+        - time: "12:05"
+          label: "LUNCH"
+          type: "break"
+        
+        - time: "13:30"
+          type: "session"
+          number: 2
+          title: "TBD"
+          chair: "TBD"
+          papers: []
+          duration: 95
+        
+        - type: "break"
+        
+        - time: "15:30"
+          type: "session"
+          number: 3
+          title: "TBD"
+          chair: "TBD"
+          papers: []
+          duration: 70
+        
+        - type: "business"
+          duration: 30
+        
+        - time: "17:30"
+          label: "End of Day 1"
+          type: "info"
+    
+    # Day 2
+    - date: 2025-12-11       # CHANGE: Day 2 date
+      label: "Thu Dec 11"    # CHANGE: Day label
+      items:
+        - time: "08:50"
+          type: "registration"
+        
+        - time: "09:10"
+          type: "keynote"
+          number: 2
+          chair: "TBD"
+        
+        - type: "break"
+        
+        - time: "10:35"
+          type: "session"
+          number: 4
+          title: "TBD"
+          chair: "TBD"
+          papers: []
+          duration: 70
+        
+        - time: "11:45"
+          label: "LUNCH"
+          type: "break"
+        
+        - time: "13:30"
+          type: "session"
+          number: 5
+          title: "TBD"
+          chair: "TBD"
+          papers: []
+          duration: 95
+        
+        - type: "break"
+        
+        - time: "15:30"
+          type: "session"
+          number: 6
+          title: "TBD"
+          chair: "TBD"
+          papers: []
+          duration: 95
+        
+        - time: "19:00"
+          label: "Banquet (until 21:30)"
+          type: "social"
+          location: "TBD"
+          location_url: ""
+    
+    # Day 3
+    - date: 2025-12-12       # CHANGE: Day 3 date
+      label: "Fri Dec 12"    # CHANGE: Day label
+      items:
+        - time: "08:50"
+          type: "registration"
+        
+        - time: "09:10"
+          type: "keynote"
+          number: 3
+          chair: "TBD"
+        
+        - type: "break"
+        
+        - time: "10:35"
+          type: "session"
+          number: 7
+          title: "TBD"
+          chair: "TBD"
+          papers: []
+          duration: 70
+        
+        - time: "11:45"
+          label: "LUNCH"
+          type: "break"
+        
+        - time: "13:30"
+          type: "session"
+          number: 8
+          title: "TBD"
+          chair: "TBD"
+          papers: []
+          duration: 95
+        
+        - type: "break"
+        
+        - time: "15:30"
+          type: "session"
+          number: 9
+          title: "TBD"
+          chair: "TBD"
+          papers: []
+          duration: 95
+        
+        - type: "closing"
+          duration: 10
+        
+        - label: "End of Conference"
+          type: "info"
